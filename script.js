@@ -10,6 +10,7 @@ hamburgerMenu.addEventListener("click", () => {
 //Code for toggling display for services tab
 
 const servicesNav = document.querySelector('#services-nav')
+const requestServicesNav = document.querySelector('#request-service-nav')
 
 function toggleActive(active) {
     if(servicesNav.style.display === '' && active) {
@@ -19,6 +20,17 @@ function toggleActive(active) {
         servicesNav.style.display = '';
     }
 }
+
+document.addEventListener('click', (event) => {
+    // console.log('window clicked');
+    if(event.target != requestServicesNav & event.target.parentElement.parentElement != servicesNav) {
+        console.log(event.target);
+        console.log(event.target.parentElement);
+        if(servicesNav.style.display === 'inline') {
+            servicesNav.style.display = '';
+        }
+    }
+})
 
 //Code for rain animation
 
