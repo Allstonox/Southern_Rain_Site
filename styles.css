@@ -172,6 +172,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .intro-section {
@@ -440,6 +441,7 @@ footer {
         right: 0px;
         left: auto;
         transform: translate(100%, -12.5%);
+        -webkit-transform: translate(100%, -12.5%);
     }
 
 
@@ -491,6 +493,7 @@ footer {
 
     .active {
         transform: translateX(500px);
+        -webkit-transform: translateX(500px);
     }
 }
 
