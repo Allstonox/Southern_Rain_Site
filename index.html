@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="logo-section">
+        <img class="logo-background-image" src="https://source.unsplash.com/random/1000x1000" alt="">
+        <img class="logo" src="/images/Southern-Rain-Logo-465w.png" alt="">
+        <canvas></canvas>
+    </section>
+    <header>
+        <nav id="header-nav">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li onmouseover="toggleActive(true)" onmouseleave="toggleActive(false)" id="request-service-nav">Request a Service
+                    <div id="services-nav">
+                        <ul onmouseover="toggleActive()" onmouseleave="toggleActive(false)">
+                            <li>Landscaping</li>
+                            <li>Lighting</li>
+                            <li>Irrigation</li>
+                            <li>Hardscaping</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <ion-icon id="hamburger-menu" name="menu-outline"></ion-icon>
+    </header>
+    <section class="intro-section">
+        <h2><strong>Engineering beautiful landscapes to be enjoyed for years to come</strong></h2>
+        <div>Family owned and operated, we have been creating landscapes in harmony with nature since 1999, using only
+            the highest quality trees, shrubs, flowers, and grasses. We truly love the outdoors and enjoy every chance
+            we have to create a one-of-a-kind design for our customers<br><br>For a FREE estimate on any of our
+            services, call <strong>(912) 222-4344</strong></div>
+    </section>
+    <section id="drone-video-section">
+        <img src="https://source.unsplash.com/random/1000x1000" alt="">
+    </section>
+    <section id="offerings-section" class="intro-section">
+        <h2><strong>Why Choose Southern Rain Inc as Your Saint Simons Island, GA Landscaping Contractors?</strong></h2>
+        <div id="offerings">
+            <div class="offering">
+                <ion-icon name="pricetags"></ion-icon>
+                <p>10 Percent Veteran Discount</p>
+            </div>
+            <div class="offering">
+                <ion-icon name="star"></ion-icon>
+                <p>25+ Years of Experience</p>
+            </div>
+            <div class="offering">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <p>One-Year Warranty on All Labor</p>
+            </div>
+            <div class="offering">
+                <ion-icon name="thumbs-up"></ion-icon>
+                <p>Great Reputation for High-Quality Work</p>
+            </div>
+            <div class="offering">
+                <ion-icon name="clipboard"></ion-icon>
+                <p>Free Estimates Within 1-3 Days</p>
+            </div>
+            <div class="offering">
+                <ion-icon name="bulb"></ion-icon>
+                <p>Name-Brand Lighting Features</p>
+            </div>
+        </div>
+    </section>
+    <section id="service-section">
+        <div class="service-row">
+            <img class="service-image left" src="https://source.unsplash.com/random/1000x1000" alt="">
+            <div class="service-description right">
+                <h2><strong>Landscaping Services</strong></h2>
+                <p><strong>Creative, experienced landscapers</strong></p>
+                <p>Our outdoor environments encourage interaction. Take a stroll through your new garden, sit and take
+                    in all the lush and colorful plantings. Smell the tea olive floating on the ocean breeze. Let our
+                    team of landscaping contractors in Sea Island, GA build an amazing landscape experience for you!</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="service-row">
+            <img class="service-image right" src="https://source.unsplash.com/random/1000x1000" alt="">
+            <div class="service-description left">
+                <h2><strong>Outdoor Lighting</strong></h2>
+                <p><strong>Passionate about landscape lighting</strong></p>
+                <p>Designing breathtaking landscape lighting scenes, one home at a time, at
+                    Southern Rain Inc. It's our passion!</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="service-row">
+            <img class="service-image left" src="https://source.unsplash.com/random/1000x1000" alt="">
+            <div class="service-description right">
+                <h2><strong>Irrigation Services</strong></h2>
+                <p><strong>Residential and commercial irrigation
+                    </strong></p>
+                <p>We follow text-book design techniques such as head-to-head coverage and matched precipitation, and
+                    have over 25 years of experience! Contact us today for the BEST landscaping contractors on Saint
+                    Simons Island, GA and Sea Island, GA!</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="service-row">
+            <img class="service-image right" src="https://source.unsplash.com/random/1000x1000" alt="">
+            <div class="service-description left">
+                <h2><strong>Hardscaping Additions</strong></h2>
+                <p><strong>Patios, driveways and much more</strong></p>
+                <p>Hardscaping is a critical element in our landscapes. It allows us to create long-lasting, “hard”
+                    elements within your yard, to add both style and functionality to your outdoor space.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section id="reviews-section">
+        <img src="https://source.unsplash.com/random/1000x1000" alt="">
+        <div>
+            <div>
+                <h2><strong>Satisfied Customer Reviews</strong></h2>
+                <p><strong>Marsha W</strong></p>
+                <div>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p>I called. They came! Quick response to my faulty
+                    pump… Shawn has a great team that is o... read more</p>
+            </div>
+            <div>
+                <p><strong>Lysa A</strong></p>
+                <div>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p>Thanks to Shawn Sandow of Southern Rain, Inc. for
+                    the great job of re-landscaping and updat... read more</p>
+            </div>
+        </div>
+    </section>
+    <section id="sponsors">
+        <img src="images/sponsors/BBB.jpg" alt="">
+        <img src="images/sponsors/Copper-Moon.jpg" alt="">
+        <img src="images/sponsors/Hunter.jpg" alt="">
+        <img src="images/sponsors/Kichler.jpg" alt="">
+        <img src="images/sponsors/NFIB.jpg" alt="">
+        <img src="images/sponsors/RainBird.jpg" alt="">
+        <img src="images/sponsors/Tech-Light.jpg" alt="">
+    </section>
+    <footer>
+        <div class="footer-section">
+            <ion-icon name="location"></ion-icon>
+            <h3>Serving</h3>
+            <ul>
+                <li>Sea Island, GA</li>
+                <li>Saint Simons Island, GA</li>
+                <li>Jekyll Island, GA</li>
+                <li>The Golden Isles of GA</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <ion-icon name="time"></ion-icon>
+            <h3>Hours</h3>
+            <ul id="schedule">
+                <li>Mon-Fri</li>
+                <li>7AM-5PM</li>
+                <li>Sat</li>
+                <li>8AM-5PM</li>
+                <li>Sun</li>
+                <li>Closed</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <ion-icon name="call"></ion-icon>
+            <h3>Contact Us</h3>
+            <ul id="footer-contact">
+                <li>(912) 222-4344</li>
+                <li>alittlesouthernrain@gmail.com</li>
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+            </ul>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Rain.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
