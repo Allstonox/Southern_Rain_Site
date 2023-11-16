@@ -108,6 +108,7 @@ header ul:has(> :hover)>li:not(:hover), header ul:has(> :focus)>li:not(:focus) {
     -webkit-transform: translateY(100%);
     background: rgba(50, 50, 50, 0.7);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 0rem;
 }
 
@@ -407,6 +408,7 @@ footer {
         background: rgba(50, 50, 50, 0.7);
         transition: transform 0.3s linear;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     header nav ul {
