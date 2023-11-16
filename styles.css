@@ -79,11 +79,11 @@ header ul li {
     transition: all 0.3s;
 }
 
-header ul li:hover {
+header ul li:hover, header ul li:focus {
     color: var(--accent-2);
 }
 
-header ul:has(> :hover)>li:not(:hover) {
+header ul:has(> :hover)>li:not(:hover), header ul:has(> :focus)>li:not(:focus) {
     color: var(--dim-text);
 }
 
