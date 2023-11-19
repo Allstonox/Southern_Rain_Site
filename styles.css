@@ -6,21 +6,21 @@
     margin: 0px;
     padding: 0px;
     font-weight: 100;
-    color: white;
+    color: black;
     border: none;
     scroll-behavior: smooth;
     list-style: none;
 }
 
 :root {
-    --text: white;
+    --text: black;
     --dim-text: #888888;
-    --bg: #2b2b2b;
-    --bg-dark: #121212;
-    --bg-light: #515151;
+    --bg-html: #CCCCCC;
+    --bg-light: #FFFFFF;
+    --bg-medium: #d4dade;
+    --bg-dark: #132433;
     --accent: #a0d2ff;
-    --accent-2: #a0d2ff;
-    --accent-2-dark: #ffcda0;
+    --accent-dark: #3A5266;
     --grey: #a5acaf;
     --header-height: 50px;
     --footer-height: 200px;
@@ -28,7 +28,7 @@
 
 
 html {
-    background: var(--bg-dark);
+    background: var(--bg-html);
 }
 
 body {
@@ -42,15 +42,59 @@ body {
     overflow-x: hidden;
 }
 
-strong {
+.light-theme {
+    background: var(--bg-light);
+}
+
+.light-theme h1, .light-theme h2 {
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--accent-dark);
+}
+
+.light-theme p, .light-theme li {
+    color: black;
+}
+
+.medium-theme {
+    background: var(--bg-medium)
+}
+
+.medium-theme h1, .medium-theme h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+}
+
+.medium-theme p, .medium-theme li {
+    color: black;
+}
+
+.dark-theme {
+    background: var(--bg-dark);
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.dark-theme p, .dark-theme li {
+    color: white;
+}
+
+.dark-theme ion-icon {
+    color: var(--accent);
+}
+
+strong {
+    font-weight: 600;
 }
 
 header {
     position: sticky;
     z-index: 100;
-    background: var(--bg-dark);
     top: 0px;
     width: 100%;
     max-width: 1300px;
@@ -85,7 +129,7 @@ header ul li {
 }
 
 header ul li:hover, header ul li:focus {
-    color: var(--accent-2);
+    color: var(--accent);
 }
 
 header ul:has(> :hover)>li:not(:hover), header ul:has(> :focus)>li:not(:focus) {
@@ -144,7 +188,6 @@ section {
     place-items: center;
     height: clamp(100px, 20vw, 200px);
     padding: 0;
-    overflow: hidden;
 }
 
 #logo-section canvas {
@@ -159,6 +202,7 @@ section {
 #logo-section .logo-background-image {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     object-fit: cover;
     object-position: center;
     filter: opacity(0.8) blur(10px);
@@ -190,25 +234,18 @@ section {
     font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
-.intro-section h2 strong {
-    height: auto;
-    color: var(--accent-2);
-}
-
 #drone-video-section {
     width: 100%;
-    height: 450px;
-    padding: 0rem 0rem;
+    height: 500px;
+    padding: 2rem 0rem;
     overflow: hidden;
 }
 
 #drone-video-section img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-}
-
-#offerings-section {
-    background: var(--bg-light);
+    overflow: hidden;
 }
 
 .intro-section #offerings {
@@ -227,6 +264,10 @@ section {
     gap: 1rem;
 }
 
+.offering p {
+    color: white;
+}
+
 .intro-section #offerings .offering ion-icon {
     width: 50px;
     height: 50px;
@@ -236,7 +277,6 @@ section {
 #service-section {
     width: 100%;
     height: auto;
-    padding: 3rem 1rem;
 }
 
 .service-row {
@@ -280,13 +320,8 @@ section {
     font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
-.service-description h2 strong {
-    color: var(--accent-2);
-}
-
-.service-description p strong {
+.service-description p {
     font-size: clamp(0.5rem, 3vw, 1rem);
-    color: var(--dim-text);
 }
 
 .service-description button {
@@ -294,11 +329,10 @@ section {
     text-transform: uppercase;
     width: 100%;
     height: 40px;
-    background: none;
-    border: 2px solid white;
+    background: var(--accent-dark);
     border-radius: 10px;
     font-size: 1.2rem;
-    color: var(--accent);
+    color: white;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -316,7 +350,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--bg-light);
 }
 
 #reviews-section img {
@@ -354,7 +387,6 @@ footer {
     display: flex;
     width: 100%;
     height: var(--footer-height);
-    background: var(--bg-dark);
     padding: 1rem;
 }
 
@@ -403,6 +435,14 @@ footer {
         display: inline;
         pointer-events: all;
         cursor: pointer;
+    }
+
+    #close-menu {
+        width: 40px;
+        height: 40px;
+        pointer-events: all;
+        cursor: pointer;
+        display: none;
     }
 
     header nav {
