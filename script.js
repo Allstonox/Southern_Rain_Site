@@ -1,19 +1,19 @@
 //Code for header nav menu
 
-const hamburgerMenu = document.querySelector("#hamburger-menu");
-const closeMenu = document.querySelector("#close-menu");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const closeMenu = document.querySelector(".close-menu");
 const headerNav = document.querySelector("#header-nav");
 
 hamburgerMenu.addEventListener("click", () => {
     headerNav.classList.toggle("active");
-    hamburgerMenu.style.display = 'none';
-    closeMenu.style.display = 'inline';
+    hamburgerMenu.classList.toggle("hide");
+    closeMenu.classList.toggle("hide");
 });
 
 closeMenu.addEventListener("click", () => {
     headerNav.classList.toggle("active");
-    hamburgerMenu.style.display = 'inline';
-    closeMenu.style.display = 'none';
+    hamburgerMenu.classList.toggle("hide");
+    closeMenu.classList.toggle("hide");
 });
 
 //Code for toggling display for services tab

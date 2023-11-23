@@ -23,7 +23,7 @@
     --accent-dark: #3A5266;
     --grey: #a5acaf;
     --header-height: 50px;
-    --footer-height: 200px;
+    --footer-height: 220px;
 }
 
 
@@ -42,17 +42,24 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .light-theme {
     background: var(--bg-light);
 }
 
-.light-theme h1, .light-theme h2 {
+.light-theme h1,
+.light-theme h2 {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--accent-dark);
 }
 
-.light-theme p, .light-theme li {
+.light-theme p,
+.light-theme li {
     color: black;
 }
 
@@ -60,13 +67,15 @@ body {
     background: var(--bg-medium)
 }
 
-.medium-theme h1, .medium-theme h2 {
+.medium-theme h1,
+.medium-theme h2 {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--accent-dark);
 }
 
-.medium-theme p, .medium-theme li {
+.medium-theme p,
+.medium-theme li {
     color: black;
 }
 
@@ -74,13 +83,16 @@ body {
     background: var(--bg-dark);
 }
 
-.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
 }
 
-.dark-theme p, .dark-theme li {
+.dark-theme p,
+.dark-theme li {
     color: white;
 }
 
@@ -128,15 +140,23 @@ header ul li {
     transition: all 0.3s;
 }
 
-header ul li:hover, header ul li:focus {
+header ul li:hover,
+header ul li:focus {
     color: var(--accent);
 }
 
-header ul:has(> :hover)>li:not(:hover), header ul:has(> :focus)>li:not(:focus) {
+header ul:has(> :hover)>li:not(:hover),
+header ul:has(> :focus)>li:not(:focus) {
     color: var(--dim-text);
 }
 
-#hamburger-menu {
+#hamburger-menu,
+#close-menu {
+    color: white;
+}
+
+.hamburger-menu,
+.close-menu {
     display: none;
     pointer-events: none;
 }
@@ -169,7 +189,7 @@ header ul:has(> :hover)>li:not(:hover), header ul:has(> :focus)>li:not(:focus) {
     padding: 1rem;
 }
 
-#services-nav ul li{
+#services-nav ul li {
     width: 100%;
     height: 100%;
     padding: 1rem 0rem;
@@ -429,20 +449,20 @@ footer {
         padding-right: 1rem;
     }
 
-    #hamburger-menu {
+    .hamburger-menu {
+        display: inline;
         width: 40px;
         height: 40px;
-        display: inline;
         pointer-events: all;
         cursor: pointer;
     }
 
-    #close-menu {
+    .close-menu {
+        display: inline;
         width: 40px;
         height: 40px;
         pointer-events: all;
         cursor: pointer;
-        display: none;
     }
 
     header nav {
@@ -534,6 +554,10 @@ footer {
     .active {
         transform: translateX(500px);
         -webkit-transform: translateX(500px);
+    }
+
+    .hide {
+        display: none;
     }
 }
 
